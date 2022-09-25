@@ -1,0 +1,26 @@
+@use "../custom" as *;
+
+@mixin gradient {
+    background: linear-gradient(to right, rgba($primary, 0.6), rgba($secondary, 0.6));
+}
+
+@mixin breakpoint {
+    @include media-breakpoint-down(sm){
+        display: none;
+    }
+}
+
+@mixin btnwidth {
+    @include media-breakpoint-down(sm){
+       width: 100%;
+    }
+}
+
+@mixin login {
+    @include media-breakpoint-down(sm){
+        padding: 0.5rem 2.5rem;
+        background: rgba($primary, 0.9); 
+        width: 100%;
+        text-align: center;
+     }
+}

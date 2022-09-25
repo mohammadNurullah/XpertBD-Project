@@ -1,0 +1,52 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+.carousel-item{
+    height: 86.5vh;
+}
+
+.row{
+    position: relative;
+
+    // .carousel__text{
+    //     margin-right: 32rem;
+    // }
+    .carousel-caption{
+        position: absolute;
+        top: 20%;
+        left: 5%;
+
+        h5{
+            // color:$gray-600;
+
+            span{
+                font-family: 'Satisfy', cursive;
+                color: rgba($secondary, 0.7);
+
+            }
+        }
+
+        .btn__catagory{
+
+            .btn__group{
+
+                button{  
+                    @extend .sign__up;
+                }
+            }
+        }
+    }
+    .ratings__side{
+        position: absolute;
+        top: 80%;
+        left: 60%;
+
+        i{
+            color: $yellow-500;
+        }
+
+    }
+    
+   
+}

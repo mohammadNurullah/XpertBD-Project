@@ -1,0 +1,76 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.input__group{
+    
+    position: relative;
+    background: #D5E0D5;
+    // margin: 0.725rem 01.875rem 0.725rem 0;
+     margin: 0 0 0 2.5rem;
+    
+
+    span{
+        @include breakpoint;
+            position:absolute;
+            height: 2rem;
+            width: 2rem;
+            //background: black;
+            //background:$gray-500;
+            //background:$gray-500;
+            background:rgba($primary, 0.6);
+            border-radius: 50%;
+            right:89%;
+            transform: translateY(10%);
+
+            i{
+                color: $white;
+                padding: 0.5rem 0 0 0.4rem;
+               
+            }
+        }
+   
+    input{
+        @include breakpoint;
+        outline: none;
+        border: none;
+        padding: 0.125rem 0 0.125rem 2.575rem;
+        background: #D5E0D5;
+
+        &:focus{
+            border: 0.1rem solid rgba($gray-700,0.8);
+        }
+    }
+
+    select{
+        @include breakpoint;
+        // background: #D5E0D5;
+        //  background: $white;
+        &:focus{
+            border: 0.1rem solid rgba($gray-700,0.8);
+            background: #D5E0D5;
+        }
+        
+    }
+   
+}
+
+.login{
+    @include login;
+}
+
+.sign__up{
+   @include btnwidth;
+    border: none;
+    padding: 0.5rem 2.5rem;
+    margin-right: 5rem;
+    width: auto;
+    background: rgba($primary, 0.9);
+    transition: background 0.5s;// later transition add to anumations.scss
+
+    &:hover{
+        background: rgba($secondary, 0.9);
+        color: $white;
+
+    }
+
+}
